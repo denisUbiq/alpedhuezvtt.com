@@ -1,0 +1,64 @@
+services:
+  app:
+    container_name: mcf_app
+    image: thecodingmachine/php:7.4-v4-apache-node16
+    environment:
+      APACHE_DOCUMENT_ROOT: public/
+      TZ: Europe/Paris
+      PHP_EXTENSION_INTL: "1"
+      MYSQL_DATABASE: "mcf"
+      MYSQL_USER: "mcf"
+      MYSQL_PASSWORD: "mcf"
+      MYSQL_HOST: "mysql"
+      MYSQL_PORT: "3306"
+    ports:
+      - "8100:80"
+      - "8080:8080"
+    networks:
+      - web
+    volumes:
+      - .:/var/www/html
+
+  mysql:
+    container_name: mcf_mysql
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: "mcf"
+      MYSQL_DATABASE: "mcf"
+      MYSQL_USER: "mcf"
+      MYSQL_PASSWORD: "mcf"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - web
+
+  phpmyadmin:
+    container_name: mcf_pma
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    depends_on:
+      - mysql
+    ports:
+      - "8101:80"
+    networks:
+      - web
+
+  mailer:
+    container_name: mcf_mailer
+    image: schickling/mailcatcher
+    ports: ["1025", "1080"]
+    networks:
+      - web
+
+volumes:
+  mysql_data:
+    driver: local
+
+networks:
+  web:
+    name: web-network
+
