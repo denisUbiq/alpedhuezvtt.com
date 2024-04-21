@@ -1,0 +1,30 @@
+<div class="btn_col col-lg-8 align-content-center justify-content-end d-none  d-lg-flex">
+    <ul class="nav_menu">
+        {% for menu in menus %}
+            {% if menu.submenus is defined %}
+                <li class="has_child">
+                    <a href="{{ menu.link }}">{{ menu.text }} <i class="ph ph-caret-down"></i></a>
+                    <ul class="nav_menu_child">
+                        {% for submenu in menu.submenus %}
+                            {% if submenu.submenus is defined %}
+                            <li class="has_child">
+                                <a href="{{ submenu.link }}">{{ submenu.text }} <i class="ph ph-caret-right"></i></a>
+                                <ul class="nav_menu_child">
+                                    {% for submenu2 in submenu.submenus %}
+                                        <li><a href="{{ submenu2.link }}">{{ submenu2.text }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                            {% else %}
+                                <li><a href="{{ submenu.link }}">{{ submenu.text }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% else %}
+                <li><a href="{{ menu.link }}">{{ menu.text }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    <a href="{{ path('booking') }}" class="head_btn align-self-center">{{ 'menu.booking' | trans | capitalize }}</a>
+</div>

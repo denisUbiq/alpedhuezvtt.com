@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 align-self-center mb-60 mb-lg-0">
+            <div class="stat_counter">
+                <img class="stat_img_main" src="{{ asset('images/about.jpg') }}" alt data-cue="slideInUp">
+                <div class="stat_box" data-cue="slideInUp" data-delay="200">
+                    <i class="ph ph-flame"></i>
+                    <div class="stat_content">
+                        <span>{{ 'home.about.caption' | trans | capitalize }}</span>
+                        <h3>{{ 'home.about.catchphrase' | trans | capitalize }}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-5  offset-lg-1">
+            <p class="rdn_subtext" data-cue="slideInUp">{{ 'home.about.surtitle' | trans | capitalize }}</p>
+            <h2 class="rdn_title" data-cue="slideInUp" data-delay="200">{{ 'home.about.title' | trans | capitalize }}</h2>
+            <p class="rdn_boldtext">{{ 'home.about.subtitle' | trans | capitalize }}</p>
+            <div class="accordion rdn_accordian" id="about_accordian">
+                {% for i in 1..3 %}
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading{{ loop.index }}">
+                        <button class="accordion-button {% if not loop.first %}collapsed{% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ loop.index }}" aria-expanded="true" aria-controls="collapse{{ loop.index }}">
+                            {{ ('home.about.accordion.' ~ loop.index ~ '.question') | trans | capitalize }}
+                        </button>
+                    </h2>
+                    <div id="collapse{{ loop.index }}" class="accordion-collapse collapse {% if loop.first %}show{% endif %}" aria-labelledby="heading{{ loop.index}}" data-bs-parent="#about_accordian">
+                        <div class="accordion-body">
+                            {{ ('home.about.accordion.' ~ loop.index ~ '.answer') | trans | raw }}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

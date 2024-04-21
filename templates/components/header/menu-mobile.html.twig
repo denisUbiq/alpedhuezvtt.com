@@ -1,0 +1,41 @@
+<div class="col-6 align-content-center align-self-center justify-content-end d-flex  d-lg-none">
+    <a class="mobile_menu_btn" data-bs-toggle="offcanvas" href="#mobilemenu" role="button" aria-controls="mobilemenu">
+        <i class="ph ph-list"></i>
+    </a>
+    <div class="mobile_menu_container offcanvas offcanvas-start" tabindex="-1" data-bs-scroll="true" id="mobilemenu">
+        <div class="offcanvas-header">
+            <button class="close_mb" data-bs-dismiss="offcanvas" aria-label="Close"><i class="ph ph-x"></i></button>
+        </div>
+        <div class="offcanvas-body">
+            <a href="{{ path('home') }}" class="logo_mobile"><img src="{{ asset('images/logo_full.png') }}" alt="image"></a>
+            <ul class="mobile_menu">
+                {% for menu in menus %}
+                    {% if menu.submenus is defined %}
+                        <li class="mdropdown">
+                            <a href="{{ menu.link }}">{{ menu.text }}</a>
+                            <ul class="mdropdown_child">
+                                {% for submenu in menu.submenus %}
+                                    {% if submenu.submenus is defined %}
+                                        <li class="mdropdown">
+                                            <a href="{{ submenu.link }}">{{ submenu.text }}</a>
+                                            <ul class="mdropdown_child">
+                                                {% for submenu2 in submenu.submenus %}
+                                                    <li><a href="{{ submenu2.link }}">{{ submenu2.text }}</a></li>
+                                                {% endfor %}
+                                            </ul>
+                                        </li>
+                                    {% else %}
+                                        <li><a href="{{  submenu.link }}">{{ submenu.text }}</a></li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    {% else %}
+                        <li><a href="{{ menu.link }}">{{ menu.text }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <a href="{{ path('booking') }}" class="head_btn align-self-center">{{ 'menu.booking' | trans | capitalize }}</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section id="events-slider" class="overflow-hidden pt-100">
+        <div class="container">
+            <div class="row align-content-center mb-100 mt-100">
+                <div class="col-lg-6 align-self-center mb-30 mb-lg-0">
+                    <p class="rdn_subtext" data-cue="slideInUp">
+                        {{ 'course.courses' | trans | capitalize }}
+                        - {{ course.categories[0].name | translation }}
+                    </p>
+                    <h1 class="rdn_title mb-0" data-cue="slideInUp" data-delay="200">
+                        {{ course.title | translation }}
+                    </h1>
+                </div>
+                <div class="col-lg-6 align-self-end">
+                    <p class="rdn_boldtext">
+                        {{ course.description | translation | raw}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container events_main_slider">
+            <div class="swiper-wrapper">
+                {% for i in 1..5 %}
+                    <div class="swiper-slide">
+                        <img src="{{ asset('images/courses/' ~ course.slug ~ '-' ~ i ~ '.jpg') }}" alt>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <section id="events" class="content clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul class="single_event_list gray-bg list-unstyled">
+                        <li><i class="ph-bold ph-user-circle"></i> {{ course.target | translation | raw }}</li>
+                        <li><i class="ph-bold ph-clock"></i> {{ course.schedule | translation | raw }}</li>
+                        <li><a href="#map"><i class="ph-bold ph-map-pin"></i> {{ course.meetingPoint | translation | raw }}</a></li>
+                        <li><i class="ph-bold ph-currency-eur"></i> {{ course.cost | translation | raw }}</li>
+                    </ul>
+                </div>
+                <div class="col-lg-8 offset-lg-1">
+                    {% for text in course.texts | translation | json_decode %}
+                    <p {% if loop.first %}class="rdn_boldtext"{% endif %}>
+                        {{ text }}
+                    </p>
+                    {% endfor %}
+                    <div class="row">
+                        {% set points = course.points | translation | json_decode %}
+                        {% for point in points %}
+                            {% if loop.first or loop.index ==((points|length / 2) + 1) | round %}
+                                <div class="col-lg-6">
+                                    <ul class="rdn_list">
+                            {% endif %}
+                            <li>{{ point }}</li>
+                            {% if loop.last or loop.index == (points|length / 2) | round %}
+                                </ul>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <span class="btn_outer d-block mt-30">
+                        <a href="{{ path('booking') }}" class="btn dark_hover_btn rdn_btn">{{ 'course.booking' | trans | capitalize }}</a>
+                    </span>
+                </div>
+            </div>
+
+            <div id="map" class="divider"></div>
+
+            <div id="map-container" data-longitude="{{ course.meetingPointLongitude }}" data-latitude="{{ course.meetingPointLatitude }}"></div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+{% endblock %}
+
+{% block javascripts %}
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <script src="{{ asset('scripts/meetingpoint.js') }}"></script>
+{% endblock %}

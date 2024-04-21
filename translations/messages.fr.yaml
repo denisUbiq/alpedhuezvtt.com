@@ -1,0 +1,115 @@
+seo:
+  title: Ecole VTT MCF Alpe d'Huez
+
+top:
+  opening_hours: 08h30 - 17h30
+
+menu:
+  home: accueil
+  courses: nos cours
+  contact: contact
+  booking: réservation
+  children: enfants
+  adults: adultes
+  mini-biker: mini biker
+  pitchoun: pitchoun
+  kids: kids
+  summer-camp: summer camp
+  bike-aprem: bike aprem
+  family: famille
+  road: route
+  private: cours particulier
+
+footer:
+  catchphrase: Ayant pour mission d'améliorer la vie grâce au cyclisme, nous enseignons les joies du cyclisme et plaidons pour des endroits sûrs où rouler.
+  our_courses: nos cours
+  courses:
+    children: enfants
+    adults: adultes
+    family: famille
+    road: route
+    private: cours particulier
+  the_school: l'école
+  school:
+    who_we_are: Qui sommes nous
+    contact: contact
+    find_us: nous trouver
+    booking: réserver un cours
+    instructors: nos moniteurs
+  gallery: gallerie
+
+home:
+  title: L'école de cyclisme de l'Alpe d'Huez
+  slider:
+    1:
+      alt: Ecole VTT MCF Alpe d'Huez
+      title: MCF Alpe d'Huez
+      text: L’école de VTT MCF de l’Alpe d’Huez
+      btn: reserver un cours
+  services:
+    caption: MCF c'est
+    title: une solution vélo<br>pour tous
+    text: Quel que soit votre pratique, niveau ou âge, les moniteurs guides de l’école MCF vous proposent des sorties en groupe, leçons particulières, formules famille pour découvrir, vous perfectionner ou simplement vous laisser guider. N’hésitez pas à nous contacter pour discuter afin d’organiser au mieux vos séjours estivaux sur notre domaine.
+    service:
+      1:
+        tag: expertise
+        keyword: enseignement pointu
+        catchphrase: maitrisez votre vélo
+      2:
+        tag: sécurité
+        keyword: encadrement vigilent
+        catchphrase: roulez en sécurité
+      3:
+        tag: passion
+        keyword: engouement
+        catchphrase: pédalons ensemble
+  about:
+    caption: caption
+    catchphrase: catchphrase
+    surtitle: a propos de l'école
+    title: notre histoire
+    subtitle: un petit text pas trop long mais pas trop court non plus pour résumer rapidos
+    accordion:
+      1:
+        question: 1ere question
+        answer: <p>1ere réponse</p><p>toujour 1ere rep</p>
+      2:
+        question: 2eme question
+        answer: 2eme reponse
+      3:
+        question: 2eme question
+        answer: 2eme reponse
+  testimonial:
+    caption: témoignages
+    title: ce que disent nos clients
+    customers:
+      1:
+        text: Un accueil très sympa. Nous avons passé une très bonne semaine en famille avec l’équipe de l’alpe d’huez. Nous avons eu la possibilité de choisir des groupe de niveau adapté au niveau des différents membre de la famille plus notre plus grand plaisir. Eric et toute l’équipe etait a notre ecoute et nous ont vraiment fait progresser. Nous reviendrons faire un stage l’année prochaine.
+        author: Heck
+        label: élève enthousiate
+      2:
+        text: Un accueil très sympa, une équipe très pro, qui sait faire partager sa passion. Rendez vous déjà pris pour l’année prochaine. Je recommande
+        author: Philippe
+        label: élève enthousiate
+      3:
+        text: Un grand merci à Sébastien pour son initiation au vélo électrique le mardi 17juillet ! Un moment agréable une bonne découverte et un moniteur au top !!!!
+        author: Quentin
+        label: élève enthousiate
+    instructor_caption: the mono
+  courses:
+    surtitle: nos cours
+    title: Trouvez le cours <br />qui vous correspond le mieux
+    category:
+      all: tous
+      children: enfants
+      adults: adultes
+      road: route
+      family: famille
+      private-lesson: leçon particulière
+  partners:
+    surtitle: Partenaire et sponsor
+    title: Soutenez nous
+
+course:
+  courses: nos cours
+  booking: réserver un cours

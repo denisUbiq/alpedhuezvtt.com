@@ -1,0 +1,22 @@
+seo:
+  title: Ecole VTT MCF Alpe d'Huez
+
+top:
+  opening_hours: 08.30 AM - 05.30 PM
+
+navbar:
+  home: home
+  our_school: our school
+  courses:
+    our_courses: our courses
+    mtb_children: Children MTB
+    mtb_adults: Adults MTB
+    family_formula: family formula
+    road: road
+    private_lessons: private lessons
+    levels_and_gears: levels and gears
+  contact: contact
+  booking: booking
+
+our_school:
+  title: Our School

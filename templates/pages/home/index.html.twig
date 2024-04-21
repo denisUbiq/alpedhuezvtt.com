@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'home.title' | trans }}{% endblock %}
+
+{% block body %}
+    <section class="home-slider clearfix">
+        {% include 'pages/home/01_slider.html.twig' %}
+    </section>
+    <section id="services" class="content-mb gray-bg clearfix">
+        {% include 'pages/home/02_services.html.twig' %}
+    </section>
+    <section id="about" class="content">
+        {% include 'pages/home/03_about.html.twig' %}
+    </section>
+    <section id="testimonial" class="blue-bg testimonial_box">
+        {% include 'pages/home/04_testimonial.html.twig' %}
+    </section>
+    <section id="events" class="content clearfix">
+        <div class="container">
+            {% include 'pages/home/05_courses.html.twig' %}
+            <div class="divider"></div>
+            {% include 'pages/home/06_partners.html.twig' %}
+        </div>
+    </section>
+{% endblock %}

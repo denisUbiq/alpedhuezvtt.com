@@ -1,0 +1,26 @@
+<div class="top_menu py-1 clearfix d-none d-lg-block">
+    <div class="container d-flex justify-content-lg-between align-content-center">
+        <ul class="top_menu_list">
+            <li>
+                <i class="ph ph-buildings"></i>
+                <a href="{{ address.map_link }}">{{ address.name }}</a>
+            </li>
+            <li>
+                <i class="ph ph-calendar"></i>
+                {{ 'top.opening_hours' | trans }}
+            </li>
+            <li>
+                <i class="ph ph-envelope"></i> 
+                {% include 'components/email_link.html.twig' with {email: company_email} only %}
+            </li>
+        </ul>
+        <ul class="social_top align-self-center">
+            <li>
+                <a href="{{ social_network.facebook }}"><i class="ph-bold ph-facebook-logo"></i></a>
+            </li>
+            <li>
+                <a href="{{ social_network.instagram }}"><i class="ph-bold ph-instagram-logo"></i></a>
+            </li>
+        </ul>
+    </div>
+</div>

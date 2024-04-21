@@ -1,0 +1,85 @@
+{% set menus = [
+    {
+        text: 'menu.home' | trans | capitalize,
+        link: path('home'),
+    },
+    {
+        text: 'menu.courses' | trans | capitalize,
+        link: '#',
+        submenus: [
+            {
+                text: 'menu.children' | trans | capitalize,
+                link: '#',
+                submenus: [
+                    {
+                        text: 'menu.mini-biker' | trans | capitalize,
+                        link: path('courses_course', { slug: 'mini-biker' }),
+                    },
+                    {
+                        text: 'menu.pitchoun' | trans | capitalize,
+                        link: '#',
+                    },
+                    {
+                        text: 'menu.kids' | trans | capitalize,
+                        link: '#',
+                    },
+                ]
+            },
+            {
+                text: 'menu.adults' | trans | capitalize,
+                link: '#',
+                submenus: [
+                    {
+                        text: 'menu.summer-camp' | trans | capitalize,
+                        link: path('courses_course', { slug: 'summer-camp' }),
+                    },
+                    {
+                        text: 'menu.bike-aprem' | trans | capitalize,
+                        link: '#',
+                    },
+                ]
+            },
+            {
+                text: 'menu.family' | trans | capitalize,
+                link: '#',
+            },
+            {
+                text: 'menu.road' | trans | capitalize,
+                link: '#',
+            },
+            {
+                text: 'menu.private' | trans | capitalize,
+                link: '#',
+            }
+        ]
+    },
+    {
+        text: 'menu.contact' | trans | capitalize,
+        link: path('booking'),
+    },
+]%}
+
+<header class="header">
+    <nav class="top_header mt-3 mt-lg-0">
+        {% include 'components/header/top.html.twig' %}
+        <div class="container">
+            <div class="row mx-0 nav_white">
+                <div class="col-lg-4 col-6  d-flex align-content-center">
+                    <a class="logo_box align-self-center" href="{{ path('home') }}">
+                        <img class="align-self-center" src="{{ asset('images/logo_full.png') }}" alt="logo">
+                    </a>
+                </div>
+                {% include 'components/header/menu-desktop.html.twig' with {
+                    menus: menus
+                } only %}
+
+                {% include 'components/header/menu-mobile.html.twig' with {
+                    menus: menus
+                } only %}
+            </div>
+        </div>
+    </nav>
+    <div class="cloned mt-2 mt-lg-3">
+        <div class="container cloned_nav"></div>
+    </div>
+</header>

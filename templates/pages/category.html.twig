@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section class="overflow-hidden pt-100">
+        <div class="container">
+            <div class="row align-content-center mb-100 mt-100">
+                <h1 class="rdn_title mb-0">
+                    {{ category.name | translation }}
+                </h1>
+            </div>
+            <div class="row align-content-center mb-100 mt-100">
+                <ul>
+                    {% for course in category.courses %}
+                        <li><a href="{{ path('courses_course', { slug: course.slug } ) }}">{{ course.title | translation }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

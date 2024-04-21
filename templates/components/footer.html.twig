@@ -1,0 +1,52 @@
+<section class="dark-bg footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 mb-30 mb-lg-0">
+                <img class="footer_logo" src="{{ asset('images/logo_full.png') }}" alt>
+                <p>{{ 'footer.catchphrase' | trans }}</p>
+                <ul class="footer_address">
+                    <li><i class="ph ph-house"></i> {{ address.name }}</li>
+                    <li>
+                        <i class="ph ph-envelope"></i>
+                        {% include 'components/email_link.html.twig' with {email: company_email} only %}
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 footer_column mb-30 mb-lg-0">
+                <h3>{{ 'footer.our_courses' | trans | capitalize }}</h3>
+                <ul>
+                    <li><a href="#">{{ 'footer.courses.children' | trans | capitalize }}</a></li>
+                    <li><a href="#">{{ 'footer.courses.adults' | trans | capitalize }}</a></li>
+                    <li><a href="#">{{ 'footer.courses.family' | trans | capitalize }}</a></li>
+                    <li><a href="#">{{ 'footer.courses.road' | trans | capitalize }}</a></li>
+                    <li><a href="#">{{ 'footer.courses.private' | trans | capitalize }}</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 footer_column mb-30 mb-lg-0">
+                <h3>{{ 'footer.the_school' | trans | capitalize }}</h3>
+                <ul>
+                    <li><a href="#">{{ 'footer.school.who_we_are' | trans | capitalize }}</a></li>
+                    <li><a href="#">{{ 'footer.school.contact' | trans | capitalize }}</a></li>
+                    <li><a href="#">{{ 'footer.school.find_us' | trans | capitalize }}</a></li>
+                    <li><a href="#">{{ 'footer.school.booking' | trans | capitalize }}</a></li>
+                    <li><a href="#">{{ 'footer.school.instructors' | trans | capitalize }}</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 footer_column mb-lg-0">
+                <h3>{{ 'footer.gallery' | trans | capitalize }}</h3>
+                <div class="rdn_gallery">
+                    {% for i in 1..6 %}
+                        <div class="gallery_inner">
+                            <a href="{{ asset('images/footer/' ~ i ~'.png') }}" data-gallery="gallery" data-width="90%" data-title="Enjoy the ride." data-description="Riders from all over country have registered for the inaugural event.">
+                                <img src="{{ asset('images/footer/' ~ i ~'.png') }}" class="gallery_popup" alt="gallery" />
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="divider_footer"></div>
+        <p>Copyright © 2023 Ecole VTT MCF Alpe d'Huez. Tous droits réservés.</p>
+    </div>
+</section>
+<div class="scrollToTopBtn"><i class="ph ph-arrow-up"></i></div>

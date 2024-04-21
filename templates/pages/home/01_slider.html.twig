@@ -1,0 +1,39 @@
+{# add more here to enable a slider #}
+{% set slides = [
+    {
+        image: asset('images/banner.jpeg'),
+        alt: 'home.slider.1.alt' | trans,
+        title: 'home.slider.1.title' | trans,
+        text:  'home.slider.1.text' | trans,
+        link: path('booking'),
+        btn: 'home.slider.1.btn' | trans | capitalize,
+    },
+
+] %}
+
+<div class="para_slider rdn_slider" data-scroll>
+    <div class="swiper-wrapper">
+        {% for slide in slides %}
+            <div class="swiper-slide">
+                <div class="slide_inner" data-swiper-parallax-x="90%">
+                    <div class="mask"></div>
+                    <img src="{{ slide.image }}" alt class="slide_bg">
+                    <div class="slide_content container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h1>{{ slide.title }}</h1>
+                                <p>{{ slide.text }}</p>
+                                <span><a href="{{ slide.link }}" class="btn rdn_btn">{{ slide.btn }}</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    {# enable this if slider is active #}
+    {# <div class="swiper-nav-btn">
+        <i class="prev_swiper ph-bold ph-caret-left"></i>
+        <i class="next_swiper ph-bold ph-caret-right"></i>
+    </div> #}
+</div>
