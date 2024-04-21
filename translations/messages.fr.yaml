@@ -1,5 +1,6 @@
 seo:
   title: Ecole VTT MCF Alpe d'Huez
+  description: MCF Alpe d'Huez propose des cours de VTT pour tous niveaux. Apprenez le VTT de montagne avec des moniteurs certifiés et explorez des pistes légendaires. Réservez dès maintenant!
 
 top:
   opening_hours: 08h30 - 17h30
@@ -31,11 +32,10 @@ footer:
     private: cours particulier
   the_school: l'école
   school:
-    who_we_are: Qui sommes nous
+    our_school: notre école
     contact: contact
     find_us: nous trouver
     booking: réserver un cours
-    instructors: nos moniteurs
   gallery: gallerie
 
 home:

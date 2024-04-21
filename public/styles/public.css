@@ -3,6 +3,10 @@
   --color-secondary: #e7f9fe;
 }
 
+html {
+  scroll-padding-top: 110px; 
+}
+
 /* import google font */
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&family=Lexend:wght@500;700&display=swap");
 /* Global Styles */
@@ -1810,6 +1814,10 @@ p:last-child {
   transition: 0.3s;
 }
 
+.footer img.flag {
+  height: 20px;
+}
+
 /* GALLERY STYLE */
 .rdn_gallery {
   display: -webkit-box;
@@ -1918,4 +1926,16 @@ p:last-child {
 #map-container {
   width:100%;
   height:400px;
+}
+
+.instructor.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.instructor.card > .container {
+  margin: 15px 0 15px;
+}
+
+.instructor__title {
+  color: grey;
 }

@@ -1,0 +1,6 @@
+{% for key, val in booking %}
+    <b>{{ key }}</b>: {{ val }}
+    {% if not loop.last %}
+    <br>
+    {% endif %}
+{% endfor %}

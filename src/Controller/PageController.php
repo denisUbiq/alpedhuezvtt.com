@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Category;
 use App\Entity\Course;
+use App\Entity\Instructor;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -15,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
  *     "en": "/en"
  * })
  */
-class DefaultController extends AbstractController
+class PageController extends AbstractController
 {
     /**
      * @Route("/", name="home")
@@ -28,6 +29,21 @@ class DefaultController extends AbstractController
         return $this->render('pages/home/index.html.twig', [
             'categories' => $categories,
             'courses' => $courses,
+        ]);
+    }
+
+    /**
+     * @Route({
+     *     "fr": "/notre-ecole",
+     *     "en": "/our-school"
+     * }, name="our_school")
+     */
+    public function instructors(EntityManagerInterface $entityManager): Response
+    {
+        $instructors = $entityManager->getRepository(Instructor::class)->findAll();
+
+        return $this->render('pages/team.html.twig', [
+            'instructors' => $instructors
         ]);
     }
 }

@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section class="overflow-hidden pt-100">
+        <div class="container">
+            <div id="booking" class="row align-content-center mb-100 mt-100">
+                <h1 class="rdn_title mb-0">
+                    Réservations en ligne
+                </h1>
+                <div>
+                    {{ form(form) }}
+                </div>
+            </div>
+            <div id="contact" class="row align-content-center mb-100 mt-100">
+                <h1 class="rdn_title mb-0">
+                    Contacts
+                </h1>
+                <div>
+                    Plusieurs moyens pour nous joindre, obtenir des informations ou réserver. Avant votre séjour ou une fois sur place :
+                    <ul>
+                        <li>Renseignements et réservations sur place : Au bureau de la Maison de l’Alpe au Vieil Alpe, ou à l’école MCF des Grandes Rousses</li>
+                        <li>Renseignements par téléphone : +33788092510</li>
+                        <li>Renseignements par mail : contact@alpedhuezvtt.com</li>
+                        <li>Réservation par téléphone : +33476803169</li>
+                        <li>Réservation en ligne : Via le formulaire ci-dessous</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

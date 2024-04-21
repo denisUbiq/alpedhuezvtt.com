@@ -10,26 +10,28 @@
                         <i class="ph ph-envelope"></i>
                         {% include 'components/email_link.html.twig' with {email: company_email} only %}
                     </li>
+                    <li>
+                        <a href="{{ path('home', { _locale: 'fr' }) }}"><img src="{{ asset('images/fr.svg') }}" alt="fr"  class="flag"/></a>
+                        <a href="{{ path('home', { _locale: 'en' }) }}"><img src="{{ asset('images/gb.svg') }}" alt="en"  class="flag"/></a>
+                    </li>
                 </ul>
             </div>
             <div class="col-lg-3 footer_column mb-30 mb-lg-0">
                 <h3>{{ 'footer.our_courses' | trans | capitalize }}</h3>
                 <ul>
-                    <li><a href="#">{{ 'footer.courses.children' | trans | capitalize }}</a></li>
-                    <li><a href="#">{{ 'footer.courses.adults' | trans | capitalize }}</a></li>
-                    <li><a href="#">{{ 'footer.courses.family' | trans | capitalize }}</a></li>
-                    <li><a href="#">{{ 'footer.courses.road' | trans | capitalize }}</a></li>
-                    <li><a href="#">{{ 'footer.courses.private' | trans | capitalize }}</a></li>
+                    <li><a href="{{ path('courses_category', { slug: 'adults' }) }}">{{ 'footer.courses.adults' | trans | capitalize }}</a></li>
+                    <li><a href="{{ path('courses_category', { slug: 'children' }) }}">{{ 'footer.courses.children' | trans | capitalize }}</a></li>
+                    <li><a href="{{ path('courses_category', { slug: 'family' }) }}">{{ 'footer.courses.family' | trans | capitalize }}</a></li>
+                    <li><a href="{{ path('courses_category', { slug: 'road' }) }}">{{ 'footer.courses.road' | trans | capitalize }}</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 footer_column mb-30 mb-lg-0">
                 <h3>{{ 'footer.the_school' | trans | capitalize }}</h3>
                 <ul>
-                    <li><a href="#">{{ 'footer.school.who_we_are' | trans | capitalize }}</a></li>
+                    <li><a href="{{ path('our_school') }}">{{ 'footer.school.our_school' | trans | capitalize }}</a></li>
                     <li><a href="#">{{ 'footer.school.contact' | trans | capitalize }}</a></li>
                     <li><a href="#">{{ 'footer.school.find_us' | trans | capitalize }}</a></li>
-                    <li><a href="#">{{ 'footer.school.booking' | trans | capitalize }}</a></li>
-                    <li><a href="#">{{ 'footer.school.instructors' | trans | capitalize }}</a></li>
+                    <li><a href="{{ path('booking') }}">{{ 'footer.school.booking' | trans | capitalize }}</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 footer_column mb-lg-0">
