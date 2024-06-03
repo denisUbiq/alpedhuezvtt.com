@@ -1,19 +1,23 @@
-const containerId = 'map-container'
-const container = document.getElementById(containerId);
+const containerClass = 'map-container'
+const containers = document.querySelectorAll(`.${containerClass}`);
 
-// Creating map options
-var mapOptions = {
-    center: [container.dataset.longitude, container.dataset.latitude],
-    zoom: 16
-}
 
-var map = new L.map(containerId, mapOptions);
+containers.forEach(container => {
+    console.log(container.id)
+    // Creating map options
+    var mapOptions = {
+        center: [container.dataset.longitude, container.dataset.latitude],
+        zoom: 16
+    }
 
-// Creating a Layer object
-var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+    var map = new L.map(container.id, mapOptions);
 
-// Adding layer to the map
-map.addLayer(layer);
+    // Creating a Layer object
+    var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
 
-let marker = new L.Marker([container.dataset.longitude, container.dataset.latitude]);
-marker.addTo(map);
+    // Adding layer to the map
+    map.addLayer(layer);
+
+    let marker = new L.Marker([container.dataset.longitude, container.dataset.latitude]);
+    marker.addTo(map); 
+});

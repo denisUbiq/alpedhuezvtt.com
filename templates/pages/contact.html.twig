@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<section id="events-slider" class="overflow-hidden pt-100 pb-100">
+    <div class="container">
+        <div class="row align-content-center mb-60 mt-100">
+            <h1 class="rdn_title mb-0" data-cue="slideInUp" data-delay="200">
+                Contacts
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-5">
+                <p class="rdn_boldtext">
+                    Plusieurs moyens pour nous joindre, obtenir des informations ou réserver. Avant votre séjour ou une fois sur place :
+                </p>
+                <ul>
+                    <li><strong>Renseignements et réservations sur place :</strong><a href="#maison-alpe"> Au bureau de la Maison de l’Alpe au Vieil Alpe</a>, ou à <a href="#grandes-rousses">l’école MCF des Grandes Rousses</a></li>
+                    <li><strong>Renseignements par téléphone :</strong><span class="phone"> +33788092510</span></li>
+                    <li><strong>Renseignements par mail :</strong>&nbsp;contact@alpedhuezvtt.com</li>
+                    <li><strong>Réservation par téléphone :</strong><span class="phone"> +33476803169</span></li>
+                    <li><strong>Réservation en ligne :</strong> Via le formulaire ci-dessous</li>
+                </ul>
+            </div>
+            <div class="col-lg-7">
+                <p id="maison-alpe" class="rdn_subtext">
+                    la Maison de l’Alpe
+                </p>
+                <div id="map-1" class="map-container" data-longitude="45.0905834" data-latitude="6.0651631"></div>
+                <p id="grandes-rousses" class="rdn_subtext pt-100">
+                    Ecole MCF des Grandes Rousses
+                </p>
+                <div id="map-2" class="map-container" data-longitude="45.097783" data-latitude="6.069325"></div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+{% endblock %}
+
+{% block javascripts %}
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <script src="{{ asset('scripts/meetingpoint.js') }}"></script>
+{% endblock %}

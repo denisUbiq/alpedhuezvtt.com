@@ -16,11 +16,11 @@ class BookingController extends AbstractController
 {
     /**
      * @Route({
-     *     "fr": "/contact",
-     *     "en": "/en/contact}"
+     *     "fr": "/reservation",
+     *     "en": "/en/booking"
      * }, name="booking")
      */
-    public function contact(Request $request, MailerInterface $mailer): Response
+    public function booking(Request $request, MailerInterface $mailer): Response
     {
         $form = $this->createForm(BookingType::class);
 
