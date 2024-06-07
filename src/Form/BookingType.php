@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+use Gregwar\CaptchaBundle\Type\CaptchaType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -20,6 +21,7 @@ class BookingType extends AbstractType
             ->add('home_address', TextType::class)
             ->add('phone', TextType::class)
             ->add('emergency_phone', TextType::class)
+            ->add('captcha', CaptchaType::class)
             ->add('save', SubmitType::class)
         ;
     }

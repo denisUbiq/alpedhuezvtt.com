@@ -3,7 +3,6 @@ const containers = document.querySelectorAll(`.${containerClass}`);
 
 
 containers.forEach(container => {
-    console.log(container.id)
     // Creating map options
     var mapOptions = {
         center: [container.dataset.longitude, container.dataset.latitude],

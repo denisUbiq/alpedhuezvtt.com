@@ -1,3 +1,4 @@
+version: '2'
 services:
   app:
     container_name: mcf_app
@@ -5,7 +6,8 @@ services:
     environment:
       APACHE_DOCUMENT_ROOT: public/
       TZ: Europe/Paris
-      PHP_EXTENSION_INTL: "1"
+      PHP_EXTENSION_INTL: 1
+      PHP_EXTENSION_GD: 1
       MYSQL_DATABASE: "mcf"
       MYSQL_USER: "mcf"
       MYSQL_PASSWORD: "mcf"

@@ -16,8 +16,8 @@ class BookingController extends AbstractController
 {
     /**
      * @Route({
-     *     "fr": "/reservation",
-     *     "en": "/en/booking"
+     *     "fr": "/contact-et-reservation",
+     *     "en": "/en/contact_and-booking"
      * }, name="booking")
      */
     public function booking(Request $request, MailerInterface $mailer): Response

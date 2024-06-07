@@ -93,7 +93,7 @@ class CourseFixtures extends Fixture implements DependentFixtureInterface
                     'en' => '',
                 ],
                 'cost' => [
-                    'fr' => '35€ par séance <br /> 29 euros par personne à partir de 5 demi-journées consécutives',
+                    'fr' => '35€ par séance <br /> 29€ par personne à partir de 5 demi-journées consécutives',
                     'en' => '',
                 ],
                 'texts' => [
@@ -140,7 +140,7 @@ class CourseFixtures extends Fixture implements DependentFixtureInterface
                     'en' => '',
                 ],
                 'cost' => [
-                    'fr' => '35€ par séance <br /> 29 euros par personne à partir de 5 demi-journées consécutives',
+                    'fr' => '35€ par séance <br /> 29€ par personne à partir de 5 demi-journées consécutives',
                     'en' => '',
                 ],
                 'texts' => [
