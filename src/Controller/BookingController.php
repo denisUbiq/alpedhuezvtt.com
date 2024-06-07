@@ -22,14 +22,15 @@ class BookingController extends AbstractController
      */
     public function booking(Request $request, MailerInterface $mailer): Response
     {
+        $companyEmail = $this->getParameter('app.paramname');
         $form = $this->createForm(BookingType::class);
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $booking = $form->getData();
             $email = (new TemplatedEmail())
-                ->from(new Address('web@alpedhuezvtt.com', 'Site web'))
-                ->to('contact@alpedhuezvtt.com')
+                ->from(new Address($companyEmail, 'Site web'))
+                ->to($companyEmail)
                 ->subject('Nouvelle réservation en ligne!')
                 ->htmlTemplate('emails/new_booking.html.twig')
                 ->context([
