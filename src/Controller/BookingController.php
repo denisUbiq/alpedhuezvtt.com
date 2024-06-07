@@ -22,7 +22,7 @@ class BookingController extends AbstractController
      */
     public function booking(Request $request, MailerInterface $mailer): Response
     {
-        $companyEmail = $this->getParameter('app.paramname');
+        $companyEmail = $this->getParameter('app.company_email');
         $form = $this->createForm(BookingType::class);
 
         $form->handleRequest($request);
