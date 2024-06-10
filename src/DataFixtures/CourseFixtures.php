@@ -11,6 +11,7 @@ use Doctrine\Persistence\ObjectManager;
 class CourseFixtures extends Fixture implements DependentFixtureInterface
 {
     public const MINIBIKER_REFERENCE = 'minibiker-course';
+    public const KIDS_REFERENCE = 'kids-course';
     public const SUMMERCAMP_REFERENCE = 'summercamp-course';
     public const ROAD_REFERENCE = 'road-course';
     public const PRIVATE_REFERENCE = 'private-course';
@@ -34,7 +35,7 @@ class CourseFixtures extends Fixture implements DependentFixtureInterface
                 'meetingPointLongitude' => '45.099108',
                 'meetingPointLatitude' => '6.070151',
                 'description' => [
-                    'fr' => 'Mini-Biker c’est la formule VTT de l’Ecole MCF pour les tout petits de 4 à 6 ans pour une une progression dans le plaisir et le jeu grâce au savoir faire de nos moniteurs.',
+                    'fr' => 'Mini-Biker c’est la formule VTT de l’Ecole MCF pour les tout petits à partir de 5 ans pour une une progression dans le plaisir et le jeu grâce au savoir faire de nos moniteurs.',
                     'en' => '',
                 ],
                 'target' => [
@@ -53,6 +54,55 @@ class CourseFixtures extends Fixture implements DependentFixtureInterface
                     'fr' => [
                         'C’est la formule VTT de l’Ecole MCF pour les tout petits. Le stage est composé de 5 séances de VTT totalement adaptées à leur âge; pour une une progression dans le plaisir et le jeu grâce au savoir faire de nos moniteurs.',
                         'Au cours de la semaine de stage ils vont acquérir de l’autonomie, et apprendre à manier le vélo. Ils vont ainsi développer équilibre, sens des trajectoires et des déplacements en deux roues. Enfin ils apprendront à freiner sur tout type de terrain.'
+                    ],
+                    'en' => [],
+                ],
+                'points' => [
+                    'fr' => [
+                        'Les après-midi du lundi au vendredi de 14:00 à 16:00',
+                        'Casque et gants obligatoires',
+                        'Prix Hors remontées mécaniques et matériel',
+                        'Paiement sur place',
+                    ],
+                    'en' => [],
+                ],
+            ],
+            [
+                'ref' => self::KIDS_REFERENCE,
+                'slug' => 'kids-biker',
+                'categories' => [CategoryFixtures::CHILDREN_REFERENCE],
+                'title' => [
+                    'fr' => 'Kids / Pitchouns',
+                    'en' => 'Kids / PItchouns',
+                ],
+                'meetingPoint' => [
+                    'fr' => 'Kid Park',
+                    'en' => 'Kid Park',
+                ],
+                'meetingPointLongitude' => '45.099108',
+                'meetingPointLatitude' => '6.070151',
+                'description' => [
+                    'fr' => 'Les Kids Biker et Ptchouns bikers c\'est notre formule enfant. Des groupes de niveau et âge sont proposé afin de faire progresser vos petits dans les meilleurs conditions.',
+                    'en' => '',
+                ],
+                'target' => [
+                    'fr' => 'Enfants à partir de 6 ans',
+                    'en' => '',
+                ],
+                'schedule' => [
+                    'fr' => '14h à 16h',
+                    'en' => '',
+                ],
+                'cost' => [
+                    'fr' => '35€ par séance <br /> 145€ pour le stage de 5 jours',
+                    'en' => '',
+                ],
+                'texts' => [
+                    'fr' => [
+                        'Nous évoluons sur le domaine de Marmotteland, un terrain ludique et adapté pour rouler et progresser en toute sécurité',
+                        'Pour les plus jeunes, l\'apprentissage des bases du VTT se fait dans un espace sécurisé avec tapis roulant. Nous abordons les différents fondamentaux techniques appropriés à leur niveau sur fond de jeu et d’amusement.',
+                        'Pour les plus grands, c\'est montée en cabine et enchaînement des descentes, dérapages et sauts. En fin de semaine, tous les enfants se retrouvent pour une longue descente',
+                        'Attention les parents, entraînez-vous, car ils iront plus vite que vous ! Minimum 4pax.'
                     ],
                     'en' => [],
                 ],
