@@ -38,27 +38,27 @@ class CourseFixtures extends Fixture implements DependentFixtureInterface
                     'en' => '',
                 ],
                 'target' => [
-                    'fr' => 'Enfants de 4 à 6 ans',
+                    'fr' => 'Enfants à partir de 5 ans',
                     'en' => '',
                 ],
                 'schedule' => [
-                    'fr' => '16h15 à 17h15',
+                    'fr' => '14h à 16h',
                     'en' => '',
                 ],
                 'cost' => [
-                    'fr' => '20€ par séance <br /> 75€ pour le stage de 5 jours',
+                    'fr' => '35€ par séance <br /> 145€ pour le stage de 5 jours',
                     'en' => '',
                 ],
                 'texts' => [
                     'fr' => [
-                        'C’est la formule VTT de l’Ecole MCF pour les tout petits de 4 à 6 ans.  Le stage est composé de 5 séances de VTT totalement adaptées à leur âge; pour une une progression dans le plaisir et le jeu grâce au savoir faire de nos moniteurs.',
+                        'C’est la formule VTT de l’Ecole MCF pour les tout petits. Le stage est composé de 5 séances de VTT totalement adaptées à leur âge; pour une une progression dans le plaisir et le jeu grâce au savoir faire de nos moniteurs.',
                         'Au cours de la semaine de stage ils vont acquérir de l’autonomie, et apprendre à manier le vélo. Ils vont ainsi développer équilibre, sens des trajectoires et des déplacements en deux roues. Enfin ils apprendront à freiner sur tout type de terrain.'
                     ],
                     'en' => [],
                 ],
                 'points' => [
                     'fr' => [
-                        'Les après-midi du lundi au vendredi de 16:00 à 17:00',
+                        'Les après-midi du lundi au vendredi de 14:00 à 16:00',
                         'Casque et gants obligatoires',
                         'Prix Hors remontées mécaniques et matériel',
                         'Paiement sur place',
