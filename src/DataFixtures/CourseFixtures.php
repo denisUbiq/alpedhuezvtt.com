@@ -82,7 +82,7 @@ class CourseFixtures extends Fixture implements DependentFixtureInterface
                 'meetingPointLongitude' => '45.099108',
                 'meetingPointLatitude' => '6.070151',
                 'description' => [
-                    'fr' => 'Les Kids Biker et Ptchouns bikers c\'est notre formule enfant. Des groupes de niveau et âge sont proposé afin de faire progresser vos petits dans les meilleurs conditions.',
+                    'fr' => 'Kids / Pitchouns bikers c\'est notre formule enfant. Des groupes de niveau et âge sont proposé afin de faire progresser vos petits dans les meilleurs conditions.',
                     'en' => '',
                 ],
                 'target' => [
